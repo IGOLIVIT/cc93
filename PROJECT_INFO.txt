@@ -1,0 +1,190 @@
+# Luminal Quest - iOS Game
+
+## Project Overview
+Luminal Quest is an engaging puzzle game with unique mechanics, built with SwiftUI for iOS 15.6+.
+
+## Features
+- ✨ Unique puzzle gameplay with node-based mechanics
+- 🎮 Multiple difficulty levels (Easy, Medium, Hard, Expert)
+- 📅 Daily challenges with coin rewards
+- 🏆 Achievement system with unlockable badges
+- 🏅 Local leaderboard system
+- 🎨 Theme shop with 6 customizable themes
+- 📊 Comprehensive progress tracking and statistics
+- ⚙️ Settings with haptic feedback control
+- 💰 In-game currency system (coins)
+- 🌟 Level progression with unlock system
+- 📱 Full iOS 15.6 compatibility
+- 🇬🇧 English language support
+
+## Tech Stack
+- SwiftUI
+- iOS 15.6+
+- MVVM Architecture
+- Local Storage (UserDefaults)
+
+## Project Structure
+```
+cc93/
+├── Models/
+│   ├── GameLevel.swift          # Level data structure
+│   ├── UserProgress.swift       # User progress tracking
+│   └── ExtendedModels.swift     # Daily challenges, leaderboard, themes
+├── ViewModels/
+│   ├── GameViewModel.swift      # Game logic and state
+│   └── SettingsViewModel.swift  # Settings management
+├── Views/
+│   ├── OnboardingView.swift         # Onboarding experience
+│   ├── HomeView.swift               # Main menu with all features
+│   ├── SimplifiedGameView.swift     # Enhanced gameplay view
+│   ├── DifficultyPickerView.swift   # Difficulty selection
+│   ├── DailyChallengeView.swift     # Daily challenges
+│   ├── LeaderboardView.swift        # Local leaderboard
+│   ├── ThemeShopView.swift          # Theme customization shop
+│   ├── GameView.swift               # Original game view
+│   └── SettingsView.swift           # Settings interface
+├── Services/
+│   ├── DataService.swift        # Local data management with extended features
+│   └── NetworkService.swift     # Future network features
+├── ContentView.swift            # Root view with navigation
+└── cc93App.swift               # App entry point
+```
+
+## New Features
+
+### 1. **Difficulty System**
+- Four difficulty levels: Easy, Medium, Hard, Expert
+- Each difficulty affects:
+  - Time limits
+  - Obstacle frequency
+  - Node values
+  - Complexity
+
+### 2. **Daily Challenges**
+- New challenge generated every day
+- Random difficulty and objectives
+- Earn coins upon completion
+- Track completion status
+
+### 3. **Leaderboard**
+- Local leaderboard tracking top scores
+- Filter by difficulty level
+- Shows top 100 entries
+- Displays player name, score, level, and difficulty
+
+### 4. **Theme Shop**
+- 6 themes available:
+  - **Midnight** (default) - Dark blue with vibrant red
+  - **Ocean** - Deep blue with cyan
+  - **Forest** - Dark green with vibrant green
+  - **Sunset** - Purple with orange
+  - **Neon** - Dark purple with pink
+  - **Golden** - Dark brown with golden yellow
+- Purchase themes with earned coins
+- Apply themes instantly
+- Themes persist across sessions
+
+### 5. **Coins System**
+- Earn coins by:
+  - Completing levels
+  - Finishing daily challenges
+  - Achieving high scores
+- Spend coins on:
+  - Theme unlocks
+- Track balance in home screen
+
+### 6. **Enhanced Home Screen**
+- Coins display with shop access
+- Daily challenge card
+- Quick play with difficulty selection
+- Statistics overview
+- Leaderboard preview
+- Achievements preview
+- Theme customization button
+
+## Color Schemes (Themes)
+- **Midnight:** Background #1D1F30, Accent #FE284A
+- **Ocean:** Background #0A1929, Accent #00B4D8
+- **Forest:** Background #1A2F1A, Accent #52B788
+- **Sunset:** Background #2D1B2E, Accent #FF6B35
+- **Neon:** Background #0D0221, Accent #FF006E
+- **Golden:** Background #1C1810, Accent #FFD60A
+
+## Build Instructions
+1. Open `cc93.xcodeproj` in Xcode
+2. Select your target device or simulator
+3. Build and run (⌘R)
+
+## Deployment Considerations
+- The project uses manual code signing
+- Minimum deployment target: iOS 15.6
+- Supports both iPhone and iPad
+- Portrait orientation (primary)
+
+## Key Game Mechanics
+1. **Node Navigation:** Tap nodes in sequence to create paths
+2. **Combo System:** Chain successful moves for higher scores
+3. **Time Challenges:** Beat levels before time expires
+4. **Power-ups:** Collect special nodes for bonuses and extra time
+5. **Obstacles:** Avoid red nodes that reduce your score
+6. **Difficulty Scaling:** Choose your challenge level
+
+## Settings Features
+- Haptic feedback control
+- Progress statistics display
+- Reset progress option
+- Delete account (full reset)
+- Achievement tracking
+
+## Onboarding Flow
+Five-screen onboarding introducing:
+1. Welcome to Luminal Quest
+2. Core gameplay mechanics
+3. Progress & competition features
+
+Uses `@AppStorage` to track completion state.
+
+## Achievement System
+- Complete levels to unlock achievements
+- Track total score and playtime
+- View progress in home screen
+- Multiple achievement categories
+
+## Game Flow
+1. **First Launch:** Onboarding experience
+2. **Home Screen:** Access all features
+3. **Select Difficulty:** Choose challenge level
+4. **Play Level:** Complete objectives for rewards
+5. **Earn Coins:** Use for theme customization
+6. **Daily Challenge:** Fresh challenge every day
+7. **Leaderboard:** Compete for top scores
+8. **Progression:** Unlock new levels
+
+## Data Persistence
+All data stored locally using UserDefaults:
+- User progress and scores
+- Completed levels
+- Unlocked achievements
+- Theme preferences
+- Purchased themes
+- Coin balance
+- Daily challenge status
+- Leaderboard entries
+
+## Future Enhancements
+- Online multiplayer
+- Cloud sync (iCloud)
+- GameCenter integration
+- Additional theme packs
+- Sound effects and music
+- More achievement types
+- Social features
+- In-app purchases
+
+---
+**Version:** 2.0.0  
+**Build:** 2  
+**Compatibility:** iOS 15.6+  
+**Language:** English
+
+
